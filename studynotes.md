@@ -1,5 +1,6 @@
 # Learn python the hard way 学习笔记
 > Exercise note
+
 ## Exercise 1
 可以通过将某句话用#变成comments让python打印时无视它
 也可以通过制造list将要打印的所有项目放进list里，然后通过print(list[0:X])打印前X项的项目。
