@@ -12,4 +12,4 @@
 - 在数字后面加 .0 可以让结果精确到后一位小数，但好像用 .00 不能精确到后两位小数，为什么？
 ## Exercise 4
 - 可以通过 = 来给variable 赋值，也能通过variable A = variable B来建立两个变量的联系。
-- 可以参见百度[http://www.baidu.com]
+- 可以参见[百度](http://www.baidu.com)
