@@ -19,3 +19,26 @@
 ## Exercise 5
 %s 是用来格式化某变量为字符串； %d 格式化某变量为整数；%f 则可以用来格式化变量并显示floating
 希望显示X小数则用**%.Xf**来获得
+
+## Exercise 6
+- 通过formatter, 可以很好的在print strings时将其他变量放入string内。
+- %r 可以用来打印raw data,
+>如 print "%r, %r" % ('one', 'two') --> 'one','two'
+print "%s, %s" % ('one', 'two') --> one, two.
+
+## Exercise 7
+- 通过乘号“\*n"来print语句n遍
+- 通过加号“\+”来连续print多个字符，并可以通过comma","来把这些字符放在同一行
+
+## Exercise 8
+- %r 会打印raw data而保留完整的原始数据
+- 在print字符时，双引号内字符若不带单引号，则结果会显示为单引号内带字符，如果双引号字符
+内有单引号，则结果会显示为双引号内带字符。
+
+## Exercise 9
+- """ 用三引号可以打印多段字符
+- """ 和 ''' 作用一样，看个人偏好。
+- \\ 是 backlash, 可以用来忽略命令符而直接print出来。/n可以用来另起一行Linefeed
+
+## Exercise 10
+- 用 /r 可以缩进（即tab)。/r和/n可以连在一起使用“/r/n”
