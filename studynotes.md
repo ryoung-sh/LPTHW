@@ -38,7 +38,17 @@ print "%s, %s" % ('one', 'two') --> one, two.
 ## Exercise 9
 - """ 用三引号可以打印多段字符
 - """ 和 ''' 作用一样，看个人偏好。
-- \\ 是 backlash, 可以用来忽略命令符而直接print出来。/n可以用来另起一行Linefeed
+- \\ 是 backlash, 可以用来忽略命令符而直接print出来。\n可以用来另起一行Linefeed
 
 ## Exercise 10
-- 用 /r 可以缩进（即tab)。/r和/n可以连在一起使用“/r/n”
+- 用 \r 可以缩进（即tab)。\r和\n可以连在一起使用“\r\n”
+
+## Exercise 11
+- 利用raw_input()可以向用户要输入数据
+
+## Exercise 12
+- 可以直接通过raw_input("括号内放入指导语")的指导用户输入指定数据，而不用每次要完
+数据print指导语
+
+## Exercise 13
+-
