@@ -7,7 +7,8 @@ I'll do a list:
 \t* Cat food
 \t* Fishies
 \t* Catnip\n\t* Grass
-""" # \t tab a line; use ''' equals """, single-quote is faster to type than double-quotes
+"""
+# \t tab a line; use ''' equals """, single-quote is faster to type than double-quotes
 
 print tabby_cat
 print persian_cat
