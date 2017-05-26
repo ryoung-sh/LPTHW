@@ -44,11 +44,12 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - 用 \r 可以缩进（即tab)。\r和\n可以连在一起使用“\r\n”
 
 ## Exercise 11
-- 利用raw_input()可以向用户要输入数据
+- 利用raw_input()可以向用户要输入数据 **这是2.7版本python有raw_input()和input(),前者将所有输入视作字符串并输出，后者只接受数字并输出数字类型**
+- python3已将raw_input()与input()整合，统一使用input(),接受任意输入，输出为字符串。
 
 ## Exercise 12
 - 可以直接通过raw_input("括号内放入指导语")的指导用户输入指定数据，而不用每次要完
 数据print指导语
 
 ## Exercise 13
-- 
+-

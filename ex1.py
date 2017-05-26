@@ -1,10 +1,10 @@
-print "Hello World!"
-print "Hello Again"
-print "I like typing this."
-print "This is fun."
-print 'Yay! Printing.'
-print "I'd much rather you 'not'."
-print 'I "said" do not touch this.'
+print("Hello World!")
+print("Hello Again")
+print("I like typing this.")
+print("This is fun.")
+print('Yay! Printing.')
+print("I'd much rather you 'not'.")
+print('I "said" do not touch this.')
 
 # Below is one way to print only one of the sentence without using #.
 list = ["hello world", "you need this", "to make a wish","and so on"] #this can make a list.
