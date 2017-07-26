@@ -12,7 +12,7 @@ print ("I also said: '%s'." % y) # print string of y
 hilarious = False
 joke_evaluation = "Isn't that joke so funny?! %r"
 
-print(joke_evaluation % hilarious) # here it prints raw data of hilarious in joke_evaluation
+print(joke_evaluation % hilarious # here it prints raw data of hilarious in joke_evaluation
 
 w = "This is the left side of ..."
 e = "a string with a right side."
