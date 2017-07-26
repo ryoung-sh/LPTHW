@@ -27,6 +27,7 @@
 print "%s, %s" % ('one', 'two') --> one, two.
 
 ## Exercise 7
+- 在print时可以用“,”将分隔的字符串打印在一行
 - 通过乘号“\*n"来print语句n遍
 - 通过加号“\+”来连续print多个字符，并可以通过comma","来把这些字符放在同一行
 
@@ -52,4 +53,4 @@ print "%s, %s" % ('one', 'two') --> one, two.
 数据print指导语
 
 ## Exercise 13
--
+- 
