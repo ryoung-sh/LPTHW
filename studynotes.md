@@ -53,4 +53,28 @@ print "%s, %s" % ('one', 'two') --> one, two.
 数据print指导语
 
 ## Exercise 13
+- python 文件是个脚本，然后调用sys即python本身带有的模块argv可以存几个变量，然后在提取出来。
+
+## Exercise 14
+- 这个exercise主要还是回顾input()的用法以及怎样更高效地给出指导语，也就是先将指导语放入一个变量里，后一直用这个变量就行了，而不是每次都打入。
+
+## Exercise 15
+- 好像pydoc调用不到file, read()的pydoc是上网搜input&output的相关文档看到的，另外读txt文件还有readline()命令，也就是一行一行读。
+
+## Exercise 16
+- 查了下官方文档，"w"写入模式在文件已经存在的情况下就会truncate这个文件，所以后面的truncate是多余的。truncate()可以改写文件至指定大小，所以也不一定是用来删除所有内容。
+- 后面一行target.write()打印方法还挺多的，可以直接用“+”将几行与"\\n"结合在一起，也可以用formatter。
+
+## Exercise 17
+- ```cat test.txt``` cat is short for concatenate. 是用来读取文件内容常用的一个命令。
+- 从os.path调用的exists功能可以用来快速检测某个文件是否存在。
+
+## Exercise 18
+- “\*args”里的"\*"相当于是说将后面给出的variable都放进args里作为一个list。
+- 写function的时候经常忘记“：”，特别写high了的时候这些细节就容易漏，写个checklist还是很有实践意义的，配合atom本身自带的indent还是能快速查出问题的。
+
+## Exercise 19
+- 这个小结练习主要想说明函数里面的参数可以非常多样，可以是某个variable,可以是math,也可以是variable和math的集合。组合方式很多，具体情况可以具体分析。
+
+## Exercise 20
 - 
