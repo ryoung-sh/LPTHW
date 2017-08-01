@@ -6,6 +6,7 @@ print('Yay! Printing.')
 print("I'd much rather you 'not'.")
 print('I "said" do not touch this.')
 
+# Study Drills
 # Below is one way to print only one of the sentence without using #.
 list = ["hello world", "you need this", "to make a wish","and so on"] #this can make a list.
 print(list[0:2])#this prints first two items of the list.
