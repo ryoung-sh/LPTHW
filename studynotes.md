@@ -80,8 +80,10 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - .read()是读取文件所有内容，也可加入参数.read(size),读取指定字符数。
 - .seek()则是将文档移动到指定位置，若参数为0，则是移动到起始位置。
 - .readline()则是一行一行进行读取，读完一行，下一次读取会读取下一行内容，直到读取返回是空值，则说明内容已经读取完。
-- 应用"+="时，要注意不同的情况，如果是immutabl目标如string, numbers, tuples, 那 a += b 时能得出 a + b的值但是a的值没有变化，但在mutable目标如list, dictionary, 采用 += 的方式与extend()作用相同，会修改原本list或dictionary。
+- 应用"+="时，要注意不同的情况，如果是immutable目标如string, numbers, tuples, 那 a += b 时能得出 a + b的值但是a的值没有变化，但在mutable目标如list, dictionary, 采用 += 的方式与extend()作用相同，会修改原本list或dictionary。
 [10.3.2. Inplace Operators](https://docs.python.org/3/library/operator.html)
 
 ## Exercise 21
-- 
+- 写这题的时候出现了一个 Nonetype的报误，有一行的数据有问题，但是仔细检查那一行并没有发现什么问题，把%d改成%r之后再跑一次就发现了问题，原来是乘法的function忘了return数值了，看来debugging用%r真是一个不错的选择。
+- return给我的感觉像是赋值，但是是给函数的结果赋值。
+- function也可以进行多重嵌套，虽然一行就解决，不过看起来还是挺复杂的，实践估计还是需要comment进行解释吧
