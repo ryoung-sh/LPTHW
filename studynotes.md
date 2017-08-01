@@ -59,7 +59,7 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - 这个exercise主要还是回顾input()的用法以及怎样更高效地给出指导语，也就是先将指导语放入一个变量里，后一直用这个变量就行了，而不是每次都打入。
 
 ## Exercise 15
-- 好像pydoc调用不到file, read()的pydoc是上网搜input&output的相关文档看到的，另外读txt文件还有readline()命令，也就是一行一行读。
+- 好像pydoc调用不到file, read()的pydoc是上网搜input&output的相关文档看到的，另外读txt文件还有readline()命令，也就是一行一行读。还可以list(file),或者f.readlines. [pydoc Input and Output](https://docs.python.org/3/tutorial/inputoutput.html)
 
 ## Exercise 16
 - 查了下官方文档，"w"写入模式在文件已经存在的情况下就会truncate这个文件，所以后面的truncate是多余的。truncate()可以改写文件至指定大小，所以也不一定是用来删除所有内容。
@@ -77,4 +77,11 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - 这个小结练习主要想说明函数里面的参数可以非常多样，可以是某个variable,可以是math,也可以是variable和math的集合。组合方式很多，具体情况可以具体分析。
 
 ## Exercise 20
+- .read()是读取文件所有内容，也可加入参数.read(size),读取指定字符数。
+- .seek()则是将文档移动到指定位置，若参数为0，则是移动到起始位置。
+- .readline()则是一行一行进行读取，读完一行，下一次读取会读取下一行内容，直到读取返回是空值，则说明内容已经读取完。
+- 应用"+="时，要注意不同的情况，如果是immutabl目标如string, numbers, tuples, 那 a += b 时能得出 a + b的值但是a的值没有变化，但在mutable目标如list, dictionary, 采用 += 的方式与extend()作用相同，会修改原本list或dictionary。
+[10.3.2. Inplace Operators](https://docs.python.org/3/library/operator.html)
+
+## Exercise 21
 - 
