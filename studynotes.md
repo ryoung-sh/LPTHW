@@ -102,7 +102,7 @@ print "%s, %s" % ('one', 'two') --> one, two.
 ## Exercise 26
 - 这题主要考察ex24和ex25的知识点，以及检查问题关注细节的能力。
 - 拼写错误比较好抓，反着读code比较容易找，但有些时候还是会忽略标点的问题，如function之后“：”就漏了。
-- 66行 ```jelly_beans, jars, crates = secret_formula(start_point)``` 里只能用"=",而不能用“==”,而且函数必须在后面不能放在前面，报错信息是```SyntasError: can't assign to funtion call```,根据错误信息反思了一下，函数不能赋值，也就是被赋值的项目必须放在前面。
+- 66行 ```jelly_beans, jars, crates = secret_formula(start_point)``` 里只能用"=",而不能用“==”,而且函数必须在后面不能放在前面，报错信息是```SyntasError: can't assign to function call```,根据错误信息反思了一下，函数不能赋值，也就是被赋值的项目必须放在前面。
 - 虽然 \\t 可以让字符串里缩进，但是读取的时候不是当做' '空格读取的，所以后面分割句子的时候就不能很好的完成。
 
 ## Exercise 27 - 28
@@ -118,4 +118,17 @@ a &#124; b | bitwise or | 返回 a or b 的逻辑值
 [运算符优先级](http://www.yiibai.com/python/python_basic_operators.html)
 
 ## Exercise 29
--
+- if后的命令如果是True，则执行，如果是FALSE，则进行else的命令执行，或结束。
+- if之后如果不indent，会报错```IndentationError: expected an indented block```
+- 因为是判断True or False来看是否继续执行，所以if后面也可以直接跟boolean test,比如
+```
+if 23 != 22:
+    print(True)
+```
+
+## Exercise 30 - 31
+- 主要是考察if, elif 和 else的搭配用法，感觉需要注意的是不能忘记加":",还有就是每个indent需要跟相应的的if或者elif对上，差一点点都读取不出来。所以打完最好还是看看有没有对上。
+
+## Exercise 32
+- range(a, b)读取的时候是从a 到 b - 1，即最后一个数是不读取的。
+- 除了append()，还可以使用.extend()

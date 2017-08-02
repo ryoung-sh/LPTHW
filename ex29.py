@@ -1,9 +1,13 @@
-people = 20
-cats = 30
-dogs = 15
+#people = 20
+#cats = 30
+#dogs = 15
+
+people = 10
+cats = 20
+dogs = 30
 
 if people < cats:
-    print("Too many cats! Th world is doomed!")
+    print("Too many cats! The world is doomed!")
 
 if people > cats:
     print("Not many cats! The world is saved!")
@@ -24,3 +28,8 @@ if people <= dogs:
 
 if people == dogs:
     print("People are dogs.")
+
+if 1 != 2:
+    print(True)
+else:
+    print(False)
