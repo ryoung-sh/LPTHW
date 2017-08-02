@@ -109,12 +109,13 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - 逻辑部分还算熟练，值得注意的是所有operator其实都是有个python自带函数的。详情见[Operators](https://docs.python.org/3/library/operator.html)
 - 几个不是很熟的operator
 
-Operators | funtion | 作用
+Operators | function | 作用
 ----------|---------|----------
 a // b   | floor division | 地板除，得到不到于结果的最大整数值
 a ^ b | bitwise exclusive | 只要input相同，则返回“1”，否则返回“0”
 a & b| bitwise and | 返回 a and b 的逻辑值
-a \| b | bitwise or | 返回 a or b 的逻辑值
-
+a &#124; b | bitwise or | 返回 a or b 的逻辑值
+[运算符优先级](http://www.yiibai.com/python/python_basic_operators.html)
 
 ## Exercise 29
+-
