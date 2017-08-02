@@ -59,7 +59,7 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - 这个exercise主要还是回顾input()的用法以及怎样更高效地给出指导语，也就是先将指导语放入一个变量里，后一直用这个变量就行了，而不是每次都打入。
 
 ## Exercise 15
-- 好像pydoc调用不到file, read()的pydoc是上网搜input&output的相关文档看到的，另外读txt文件还有readline()命令，也就是一行一行读。还可以list(file),或者f.readlines. [pydoc Input and Output](https://docs.python.org/3/tutorial/inputoutput.html)
+- pydoc file用不了, read()的pydoc是上网搜input&output的相关文档看到的，另外读txt文件还有readline()命令，也就是一行一行读。还可以list(file),或者f.readlines. [pydoc Input and Output](https://docs.python.org/3/tutorial/inputoutput.html)
 
 ## Exercise 16
 - 查了下官方文档，"w"写入模式在文件已经存在的情况下就会truncate这个文件，所以后面的truncate是多余的。truncate()可以改写文件至指定大小，所以也不一定是用来删除所有内容。
@@ -80,10 +80,41 @@ print "%s, %s" % ('one', 'two') --> one, two.
 - .read()是读取文件所有内容，也可加入参数.read(size),读取指定字符数。
 - .seek()则是将文档移动到指定位置，若参数为0，则是移动到起始位置。
 - .readline()则是一行一行进行读取，读完一行，下一次读取会读取下一行内容，直到读取返回是空值，则说明内容已经读取完。
-- 应用"+="时，要注意不同的情况，如果是immutable目标如string, numbers, tuples, 那 a += b 时能得出 a + b的值但是a的值没有变化，但在mutable目标如list, dictionary, 采用 += 的方式与extend()作用相同，会修改原本list或dictionary。
-[10.3.2. Inplace Operators](https://docs.python.org/3/library/operator.html)
+- "+="是in-place operators, 虽然 a += 1 的结果与 a = a + 1相同，但是"+="的做法是直接更改老的变量，而a = a + 1这个重新赋值的方法，则是变成一个新的值，原本的a值没有改变，和 b = a + 1的形式相同。
+[10.3.2. Inplace Operators](https://docs.python.org/3/library/operator.html) [Stack Overflow](https://stackoverflow.com/questions/41446833/what-is-the-difference-between-i-i-1-and-i-1-in-a-for-loop)
 
 ## Exercise 21
-- 写这题的时候出现了一个 Nonetype的报误，有一行的数据有问题，但是仔细检查那一行并没有发现什么问题，把%d改成%r之后再跑一次就发现了问题，原来是乘法的function忘了return数值了，看来debugging用%r真是一个不错的选择。
+- 写这节的时候出现了一个 Nonetype的报误，有一行的数据有问题，但是仔细检查那一行并没有发现什么问题，把%d改成%r之后再跑一次就发现了问题，问题不在那一行，而是开头乘法的function忘了return数值了，看来debugging用%r真是一个不错的选择。
 - return给我的感觉像是赋值，但是是给函数的结果赋值。
-- function也可以进行多重嵌套，虽然一行就解决，不过看起来还是挺复杂的，实践估计还是需要comment进行解释吧
+- function也可以进行多重嵌套，虽然一行就解决，不过看起来还是挺复杂的，实践中还是需要comments进行解释吧。
+
+## Exercise 24
+- 这节题目主要是回顾，包括"\\"escapes,还有function的组合，值得注意的是funtion也可以直接和formatter组合在一起，而不用一个一个去写每个变量，方便快捷。
+
+## Exercise 25
+- funtion里面通过```"""help sentence"""```来给funtion进行功能解说与注明，如```def sort_words(words):
+    """Sorts the words."""
+    return sorted(words)```
+后续可以通过help()来查看所有funtion以及funtion的注明功能，非常方便和清晰。
+- 在python里，一般起始数字是0，而不是1，除非特殊情况规定从1到n开始数时，1才是起始数字。而倒数第一则是-1。
+- python里调用funtion可以通过script.funtion()进行，也可以直接先```from ex25 import *```来把所有funtion都调用进来，这样使用的时候就不需要```ex25```的前缀了。
+
+## Exercise 26
+- 这题主要考察ex24和ex25的知识点，以及检查问题关注细节的能力。
+- 拼写错误比较好抓，反着读code比较容易找，但有些时候还是会忽略标点的问题，如function之后“：”就漏了。
+- 66行 ```jelly_beans, jars, crates = secret_formula(start_point)``` 里只能用"=",而不能用“==”,而且函数必须在后面不能放在前面，报错信息是```SyntasError: can't assign to funtion call```,根据错误信息反思了一下，函数不能赋值，也就是被赋值的项目必须放在前面。
+- 虽然 \\t 可以让字符串里缩进，但是读取的时候不是当做' '空格读取的，所以后面分割句子的时候就不能很好的完成。
+
+## Exercise 27 - 28
+- 逻辑部分还算熟练，值得注意的是所有operator其实都是有个python自带函数的。详情见[Operators](https://docs.python.org/3/library/operator.html)
+- 几个不是很熟的operator
+
+Operators | funtion | 作用
+----------|---------|----------
+a // b   | floor division | 地板除，得到不到于结果的最大整数值
+a ^ b | bitwise exclusive | 只要input相同，则返回“1”，否则返回“0”
+a & b| bitwise and | 返回 a and b 的逻辑值
+a \| b | bitwise or | 返回 a or b 的逻辑值
+
+
+## Exercise 29
